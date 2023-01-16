@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "./Box";
 
 function Boxlist({ items, category, allCategories }) {
-  const newTitle = allCategories.find((item) => item.value == category);
+  const newTitle = allCategories.find((item) => item.value === category);
   const pageTitle = newTitle.name;
 
   return (
