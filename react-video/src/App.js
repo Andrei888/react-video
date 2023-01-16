@@ -108,7 +108,7 @@ function App() {
     { value: "vue", name: "Vue" },
   ];
   const [useVideos, setVideos] = useState(videoList);
-  const [useCategory, setCategories] = useState("empty");
+  const [useCategory, setCategories] = useState("-1");
 
   const filterHandler = (filteredVideos) => {
     setVideos(filteredVideos);
@@ -133,7 +133,11 @@ function App() {
             />
           </header>
           <main>
-            <Boxlist items={useVideos} title="All Items" />
+            <Boxlist
+              items={useVideos}
+              category={useCategory}
+              allCategories={category}
+            />
           </main>
         </Container>
       </ThemeProvider>

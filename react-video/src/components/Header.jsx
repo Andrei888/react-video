@@ -58,8 +58,10 @@ function Header({ filterFunction, videos, allCategories, filterCat }) {
           indicatorColor="secondary"
           aria-label="Main Navigation"
         >
-          {allCategories.map((category) => {
-            return <Tab label={category.name} value={category.value} />;
+          {allCategories.map((category, index) => {
+            return (
+              <Tab key={index} label={category.name} value={category.value} />
+            );
           })}
         </Tabs>
         <TextField
